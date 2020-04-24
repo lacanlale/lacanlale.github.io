@@ -1,0 +1,10 @@
+# [04-24-2020] Twitter Poll Projects: Everyone is me [3/???]
+I am STILL doing this project but did put it on hold because of classes. First off, I went into this project knowing little about deep learning and absolutely nothing about GAN's which means I had to learn the basics before I get to the main chunk of work. After spending a day or two getting familar with the usage of neural networks, conceptually and in code, I started with CNN's as a good stepping stone. Nothing fancy or over the top, just a simple cat-dog classifier to familiarize myself with the understanding of layers and processes. 
+
+From there I moved on to GAN's which ended up being more fun than I had planned. In the process I made a shoe generator for creating fake shoes although I didn't train it all the way through. The result were vauge shapes of shoes? I might revisit this in the future just to see how close I can get to making an actual looking shoe. The tutorial for using GAN's is found [here.](https://www.youtube.com/watch?v=Nrsy6vF7rSw)
+
+![alt text](img/jordans_attempt.gif)
+
+With the background covered, all thats remaining is now trying my best to replicate what Faceshifter did with their two networks. Knowing the computation will be a bit more intensive than what I can handle, I'll likely spend more time understanding the pre-trained model.
+
+*\*\*This is a tag that gets attached to all my Twitter Poll Projects. If you think this is a cool process, you can follow me on [DEV](https://dev.to/lacanlale) for iterative updates. Twitter Poll Projects are also something I like to post about on my [twitter](https://twitter.com/frogathan) and you're also welcome to follow me and give feedback as time goes on. If you have suggestions or ideas that you think are worth trying, feel free to DM me and it might end up in the next poll.\*\**
