@@ -1,9 +1,40 @@
 <html>
 	<head>
-		<title>Work</title>
+		<title>About</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/about.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+    <body class="is-preload">
+        <div id="wrapper">
+
+            <!-- Main -->
+            <section id="main">
+                <footer>
+                    <header>
+                        <h1>Work Experience</h1>
+                    </header>
+                    <a href="index.html">Back</a>
+            </section>
+            
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="copyright">
+                    <li>Jonathan Lacanlale</li>
+                    <li>Last updated 01/17/21</li>
+                </ul>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script>
+            if ('addEventListener' in window) {
+                window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+                document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+            }
+        </script>
+
+	</body>
+
 </html>
