@@ -506,6 +506,7 @@
 		list-style: none;
 		padding-left: 0;
 		margin-top: -0.675em;
+        align-self: center;
 	}
 
 		ul.icons li {
@@ -520,7 +521,7 @@
 				width: 3.75em;
 				height: 3.75em;
 				border-radius: 100%;
-				border: solid 1px #c8cccf;
+				border: solid 1px #414f57;
 				line-height: 3.75em;
 				overflow: hidden;
 				text-align: center;
@@ -542,12 +543,11 @@
 				}
 
 				ul.icons li a:before {
-					color: #ffffff;
-					text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
+					color: #414f57;
 				}
 
 				ul.icons li a:hover:before {
-					text-shadow: 1.25px 0px 0px #47a13f, -1.25px 0px 0px #47a13f, 0px 1.25px 0px #47a13f, 0px -1.25px 0px #47a13f;
+					text-shadow: 1px 0px 0px #a1e79b, -1px 0px 0px #a1e79b, 0px 1px 0px #a1e79b, 0px -1px 0px #a1e79b;
 				}
 
 				ul.icons li a:before {
@@ -594,7 +594,7 @@
 
 /* Divider line */
     .border-line {
-        height:300px;
+        height:220px;
         padding-right: 20px;
         border-right: 1px solid #000;
     }
