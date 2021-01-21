@@ -32,7 +32,10 @@
 	}
 
 	ol, ul {
-		list-style: none;
+		cursor: default;
+        float: left;
+		margin-top: -0.675em;
+        text-align: left;
 	}
 
 	blockquote, q {
@@ -194,6 +197,7 @@
 		}
 
 	strong, b {
+        font-weight: bold;
 		color: #313f47;
 	}
 
@@ -202,6 +206,8 @@
 	}
 
 	p {
+        text-align: left;
+        
 		margin: 0 0 1.5em 0;
 	}
 
@@ -290,14 +296,13 @@
 		opacity: 0.95;
 		position: relative;
 		text-align: center;
-		width: 147em;
-        height: 40em;
 	}
         #main p{
             text-align:left;
         }
         #main a{
 		    color: #75bd6e;
+            font-weight: bold;
         }
 
 		@media screen and (max-width: 480px) {
@@ -314,7 +319,7 @@
 
 		}
 
-		body.is-preload #main {
+        body.is-preload #main {
 			-moz-transform: rotateX(15deg);
 			-webkit-transform: rotateX(15deg);
 			-ms-transform: rotateX(15deg);

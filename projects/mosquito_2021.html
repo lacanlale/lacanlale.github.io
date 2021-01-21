@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Mosquito Quantification</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/work.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+    <body class="is-preload">
+        <div id="wrapper">
+
+            <!-- Main -->
+            <section id="main">
+                <footer>
+                    <header>
+                        <h1>Mosquito Quantification</h1>
+                    </header>
+                    <h2>Duration: Ongoing</h2>
+                    <h3><b>Completed (?):</b> Ongoing, currently active in lab</h3>
+                    <p><b>Research Mentor:</b> Dr. Katya Mkrtchyan</p>
+                    <p><b>Summary:</b> Working with Dr. Mkrtchyan has been my introduction to computer vision. Under her mentorship, I have learned how to work with object detection and tracking, and have learned some fundamentals needed to understand machine learning and computer vision. Currently, our work focuses on mosquito detection and we expect to be moving forward with mosquito tracking in the near future.</p>
+                    <p><b>Abstract:</b> Mosquitoes are historically known as carriers of infectious diseases, often infecting large scale populations. Understanding mosquito behavior may provide insight as to why mosquitoes are attracted to humans. Already, biologists are performing experiments in attracting mosquitoes to various odors, however quantifying the amount of mosquitoes attracted to an odor can be a laborious, time-consuming task as mosquitoes are small and difficult to track. We hypothesize that machine learning (ML) models can produce an accurate object detection system capable of quantifying mosquitoes on a frame-by-frame basis and that the result will be close to a manually-counted ground truth. For our experiment, we utilize the videos recorded by biologists to construct a large dataset of 4000+ mosquito and non-mosquito images, and use these images to train our machine learning model. We then test this model on a given video, recording the accuracy of detection, detection time elapsed per frame, and detection time elapsed for the entire video. As an additional measurement of accuracy, we selected 1000 random frames from the video and manually counted the mosquitoes present, comparing the total produced by our model and our manual counts. Overall after testing multiple ML models such as Support Vector Machines and Random Forests, we found that we can achieve an accuracy of 90%, with a deviation +/-1 from the ground truth. With this, we conclude that our object detection system is capable of quantifying mosquitoes with further development in progress to provide assistance in understanding mosquito behavior.</p>
+
+                <h3><b>Presentations:</b></h3>
+                <ol>
+                    <li> <b>Lacanlale, J.,</b> Mkrtchyan K. (November 2020). Automated Quantification of Mosquito Behavior through Object Detection. Virtual Poster at the ABRCMS Virtual Conference.</li>
+                    <li> <b>Lacanlale, J.</b>, Mkrtchyan K. (October 2020). Automated Quantification of Mosquito Behavior through Object Detection. Virtual Poster at the SACNAS Virtual Conference.</li>
+                    <li><b>Lacanlale, J.</b>, Mkrtchyan K. (April 2020). Automated Quantification of Mosquito Behavior through Object Detection. Oral Presentation at the NIH Diversity Program Consortium Virtual Symposium.</li>
+                </ol>
+                <a href="../work.html">Back</a>
+            </section>
+            
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="copyright">
+                    <li>Jonathan Lacanlale</li>
+                </ul>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script>
+            if ('addEventListener' in window) {
+                window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+                document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+            }
+        </script>
+
+	</body>
+
+</html>
