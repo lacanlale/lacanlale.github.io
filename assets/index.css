@@ -1,10 +1,15 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 body {
-  background: #F17563;
+  background: #1A3D3B;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 30px;
   color: #222;
+}
+
+img {
+    height: 100%;
+    width: auto;
 }
 
 label {
