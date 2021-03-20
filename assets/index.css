@@ -1,7 +1,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+
+:root {
+    --lightest-green: #028E41;
+    --light-green: #006B3E;
+    --dark-green: #154d42;
+    --darkest-green: #1A3D3B;
+}
 body {
-  background: #1A3D3B;
+  background: var(--darkest-green);
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 30px;
   color: #222;
@@ -53,12 +60,131 @@ label {
 /* Info items */
 .card ul.info {
     cursor: default;
-    text-align: center;
+    text-align: right;
+    padding: 1em;
+    margin-top: 1em;
+    float: right;
 }
     ul.info li{ 
-        float: left;
         display: block;
-        font-size: 30px;
+        font-size: 32px;
+    }
+
+/* Divider line */
+.border-line {
+	height:220px;
+	padding-right: 20px;
+	border-right: 1px solid #000;
+}
+
+/* Icon items */
+.icon {
+    text-decoration: none;
+    position: relative;
+    border-bottom: none;
+}
+
+    .icon:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        text-transform: none !important;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 400;
+    }
+
+    .icon > .label {
+        display: none;
+    }
+
+    .icon:before {
+        line-height: inherit;
+    }
+
+    .icon.solid:before {
+        font-weight: 900;
+    }
+
+    .icon.brands:before {
+        font-family: 'Font Awesome 5 Brands';
+    }
+
+ul.icons {
+    cursor: default;
+    float: left;
+    list-style: none;
+    padding-left: 0;
+    margin-top: -0.675em;
+    align-self: center;
+}
+
+    ul.icons li {
+        display: block;
+        padding: 0.675em 0.5em;
+    }
+
+        ul.icons li a {
+            text-decoration: none;
+            position: relative;
+            display: block;
+            width: 3.75em;
+            height: 3.75em;
+            border-radius: 100%;
+            border: solid 1px var(--dark-green);
+            line-height: 3.75em;
+            overflow: hidden;
+            text-align: center;
+            text-indent: 3.75em;
+            white-space: nowrap;
+        }
+
+            ul.icons li a:before {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                text-transform: none !important;
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 400;
+            }
+
+            ul.icons li a:before {
+                color: #FFF;
+            }
+
+            ul.icons li a:hover:before {
+                text-shadow: 1px 0px 0px var(--dark-green), -1px 0px 0px var(--dark-green), 0px 1px 0px var(--dark-green), 0px -1px 0px var(--dark-green);
+            }
+
+            ul.icons li a:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: inherit;
+                height: inherit;
+                font-size: 1.85rem;
+                line-height: inherit;
+                text-align: center;
+                text-indent: 0;
+            }
+
+            ul.icons li a:hover {
+                border-color: #47a13f;
+            }
+
+    @media screen and (max-width: 480px) {
+
+        ul.icons li a:before {
+            font-size: 1.5rem;
+        }
+
     }
 
 /* Titles */
@@ -80,7 +206,7 @@ label {
     label:hover .card {
       -webkit-transform: rotateX(10deg);
       transform: rotateX(10deg);
-      box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
+      box-shadow: 0 20px 20px var(--dark-green);
     }
 
     input {
@@ -95,5 +221,5 @@ label {
     label:hover :checked + .card {
       transform: rotateX(170deg);
       -webkit-transform: rotateX(170deg);
-      box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 20px var(--dark-green);
     }
