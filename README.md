@@ -1,3 +1,1 @@
-# Simple-html-portfolio
-"simple html porfolio" is a stunning portfolio website, meticulously designed and developed using HTML, CSS, Bootstrap, and JavaScript. 
-![website screenshot](/web-img.png)
+This portfolio is a modified version of [Simple HTML Portfolio](https://github.com/Hammadu696/Simple-html-portfolio)
