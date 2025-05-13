@@ -21,6 +21,11 @@
     
 }
 
+ul {
+    list-style-type:square;
+    color: #FFF;
+}
+
 body {
     height: 100vh;
     background-color: var(--body-color);
