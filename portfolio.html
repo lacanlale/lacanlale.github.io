@@ -21,7 +21,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <!-- sldiderr -->
+    <!-- slider -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -137,7 +137,73 @@
     
     <!-- skills details section  -->
     <div class="container skillsdelt mx-auto pt-16">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2" id="leftSection">
+                <div class="flex flex-col h-full p-10 left_sec ">
+                    <div class="mb-4 mt-4">
+                        <h4 style="color: #64f4ab;" style=" font-family:monospace;" class="text-lg font-bold">
+                            Online Data Visualization Challenge 
+                        </h4>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <h2 class="text-5xl text-white font-bold" style="font-family:monospace;">
+                            Health Worker Density Across the Tonga Regions
+                        </h2>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <p class="text-white text-lg" style="font-family:monospace;">
+                            This static report was entered in a data visualization and design challenge
+                            hosted by the Pacific Data Hub. The challenge proposes an open-ended
+                            question of exploring provided datasets pertaining to different
+                            themes, and challenges participants to use that data to visualize key 
+                            points and issues that they would like to highlight.
+                            <br>
+                            <br>
+                            For my entry, I focused on the sparse health care coverage across the
+                            Tonga regions. Landing on this topic required several iterations and many hours of
+                            explorations as data for different regions and themes proved to be sparese.
+                            In addition to the data provided, I pulled additional open-
+                            source data recorded by the World Health Organization in order to provide
+                            a baseline comparison across the adjacent, relatively-comparable area 
+                            (specifically the Western Pacific.)
+                            <br>
+                            <br>
+                            The static report was designed in Figma, with nearly all colorschemes, heatmaps,
+                            and visualizations exported using the Python library Seaborn. The challenge itself
+                            entailed several hours of iteration, design, question formulation, and processing, but 
+                            was ultimately a fun side-project outside of my regular working hours.
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="https://github.com/lacanlale/pacific-dataviz-2025" class="flex items-center text-white text-yellow-500">
+                            <span class=" mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10.998"
+                                    viewBox="0 0 18 10.998">
+                                    <g id="right_arrow_-_icon" data-name="right arrow - icon"
+                                        transform="translate(21 -6.501) rotate(90)">
+                                        <path id="Path_98" data-name="Path 98"
+                                            d="M6.59,11.858a.714.714,0,0,0,.627.38h4.066v8.028a.717.717,0,1,0,1.434,0V12.238h4.066a.713.713,0,0,0,.627-.38.748.748,0,0,0-.02-.745l-4.783-7.77a.709.709,0,0,0-1.214,0L6.61,11.113A.754.754,0,0,0,6.59,11.858Z"
+                                            fill="#fecd1a" />
+                                    </g>
+                                </svg></span>
+                            Link to repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 anime" id="rightSection">
+                <div class="flex justify-center items-center h-full">
+                    <div class="w-3/4">
+                        <img style="border-radius: 30px;"
+                            src="img/portfolio_thumbnails/pacific_dataviz_2025.png"
+                            alt="Image" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="container skillsdelt mx-auto pt-16">
         <div class="flex flex-wrap">
             <div class="w-full lg:w-1/2" id="leftSection">
                 <div class="flex flex-col h-full p-10 left_sec ">
@@ -174,7 +240,7 @@
                                             fill="#fecd1a" />
                                     </g>
                                 </svg></span>
-                            Read more
+                            Link to paper
                         </a>
                     </div>
                 </div>
@@ -227,7 +293,7 @@
                                             fill="#fecd1a" />
                                     </g>
                                 </svg></span>
-                            Read more
+                            Link to paper
                         </a>
                     </div>
                 </div>
@@ -279,7 +345,7 @@
                                             fill="#fecd1a" />
                                     </g>
                                 </svg></span>
-                            Read more
+                            Link to paper
                         </a>
                     </div>
                 </div>
@@ -367,7 +433,7 @@
                                             fill="#fecd1a" />
                                     </g>
                                 </svg></span>
-                            Read more
+                            Link to interactive notebook
                         </a>
                     </div>
                 </div>
