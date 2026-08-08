@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/psquiz.css">
 
     <!-- ===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -106,12 +106,30 @@
                 <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../portfolio/portfolio.html">Portfolio</a></li>
-                    <li><a href="personality-quiz.html">Personaltiy Quiz</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     
+    <body>
+        <div class="quiz-container">
+            <!-- Quiz Card State -->
+            <div id="quiz-card">
+                <h1 id="question-text">Loading question...</h1>
+                <div id="options-container"></div>
+            </div>
+
+            <!-- Final Results State (Initially Hidden) -->
+            <div id="results-card" class="hidden">
+                <h2>Your Result:</h2>
+                <h1 id="personality-title"></h1>
+                <p id="personality-desc"></p>
+                <button id="restart-btn">Take Quiz Again</button>
+            </div>
+        </div>
+
+        <script src="../assets/js/psquiz.js"></script>
+    </body>
     <script>
         $(document).ready(function () {
             $('.slider').slick({
