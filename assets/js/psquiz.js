@@ -1,19 +1,114 @@
 const quizData = [
     {
-        question: "You spot a snack across from you. What did you catch?",
+        question: "First question: Do you think you'd be cozier at home or with friends?",
         options: [
-            { text: "An ant", frogtype: "Fire" },
-            { text: "A fly", frogtype: "Water" },
-            { text: "A dragonfly", frogtype: "Earth" },
-            { text: "A spider", frogtype: "Air" }
+            { 
+                text: "At home", 
+                weights: [
+                    "Pacman",
+                    "Burrowing",
+                    "Bull",
+                    "Flying"
+                ] 
+            },
+            { 
+                text: "With friends", 
+                weights: ["Humming", "Dart"]
+            }
         ]
     },
     {
-        question: "Last question: Where did all of this happen?",
+        question: "Do you think you communicate better through your expressions or through your words?",
         options: [
-            { text: "Oasis in a dessert", frogtype: "Fire" },
-            { text: "Up in the trees of a foreset", frogtype: "Water" },
-            { text: "At a pond in a rainy city", frogtype: "Earth" }
+            { 
+                text: "Expressions", 
+                weights: [
+                    "Pacman",
+                    "Burrowing",
+                    "Bull",
+                    "Flying",
+                    "Humming" 
+                ] 
+            },
+            { 
+                text: "Words", 
+                weights: ["Pacman", "Dart"]
+            }
+        ]
+    },
+    {
+        question: "What kind of clothes do you like?",
+        options: [
+            { 
+                text: "Flashy with designs", 
+                weights: [
+                    "Pacman",
+                    "Flying",
+                    "Dart"
+                ] 
+            },
+            { 
+                text: "Netural tones", 
+                weights: [
+                    "Bull",
+                    "Humming",
+                    "Burrowing"
+                ]
+            }
+        ]
+    },
+    {
+        question: "Smooth or textured?",
+        options: [
+            { 
+                text: "Smooth", 
+                weights: [
+                    "Flying",
+                    "Dart"
+                ] 
+            },
+            { 
+                text: "Textured", 
+                weights: [
+                    "Bull",
+                    "Humming",
+                    "Burrowing",
+                    "Pacman"
+                ]
+            }
+        ]
+    },
+    {
+        question: "Ability",
+        options: [
+            { text: "To soar", weights: ["Flying"] },
+            { text: "To hide", weights: ["Pacman", "Burrowing"] },
+            { text: "To group up", weights: ["Dart", "Humming"] },
+            { text: "To fight", weights: ["Bull"] }
+        ]
+    },
+    {
+        question: "Which of the bugs would you try to catch as a snack?",
+        options: [
+            {
+                text: "An ant", 
+                weights: [
+                    "Dart", 
+                    "Humming", 
+                    "Flying", 
+                    "Burrowing"
+                ] 
+            },
+            { text: "A worm", weights: ["Pacman"] },
+            { text: "A mouse", weights: ["Bull"] }
+        ]
+    },
+    {
+        question: "Last question: Which of these would you want to call home?",
+        options: [
+            { text: "Rocky deserts", weights: ["Pacman", "Humming", "Burrowing"] },
+            { text: "A forest", weights: ["Dart", "Flying"] },
+            { text: "At a pond in a rainy city", weights: ["Bull"] }
         ]
     }
 ];
@@ -21,32 +116,39 @@ const quizData = [
 const resultsData = {
     Pacman: {
         title: "South American horned frog AKA Pacman Frog",
-        desc: "You are passionate, driven, and full of raw energy. You lead with your heart and spark action wherever you go!"
+        desc: ""
     },
     Bull: {
         title: "American Bullfrog",
-        desc: "You are intuitive, deeply empathetic, and highly adaptable. You understand emotions and naturally flow around obstacles."
+        desc: ""
     },
     Flying: {
         title: "Flying Frog",
-        desc: "You are intuitive, deeply empathetic, and highly adaptable. You understand emotions and naturally flow around obstacles."
+        desc: ""
     },
     Humming: {
         title: "The Dotted Humming Frog",
-        desc: "You are intuitive, deeply empathetic, and highly adaptable. You understand emotions and naturally flow around obstacles."
+        desc: ""
     },
     Burrowing: {
         title: "Burrowing Frog",
-        desc: "You are grounded, reliable, and practical. People rely on your stability, and you build steady foundations for success."
+        desc: ""
     },
     Dart: {
         title: "Poison Dart Frog",
-        desc: "You are intellectual, curious, and deeply creative. You value your freedom and love exploring abstract concepts."
+        desc: ""
     }
 };
 
 let currentQuestionIndex = 0;
-let scoreTracker = { Fire: 0, Water: 0, Earth: 0, Air: 0 };
+let scoreTracker = { 
+    Pacman: 0, 
+    Bull: 0, 
+    Flying: 0, 
+    Humming: 0,
+    Burrowing: 0,
+    Dart: 0
+};
 
 const questionText = document.getElementById("question-text");
 const optionsContainer = document.getElementById("options-container");
@@ -65,13 +167,15 @@ function loadQuestion() {
         const button = document.createElement("button");
         button.textContent = option.text;
         button.classList.add("option-btn");
-        button.addEventListener("click", () => handleAnswer(option.frogtype));
+        button.addEventListener("click", () => handleAnswer(option.weights));
         optionsContainer.appendChild(button);
     });
 }
 
-function handleAnswer(frogtype) {
-    scoreTracker[frogtype]++;
+function handleAnswer(weights) {
+    for (const category of weights) {
+        scoreTracker[category]++;
+    }
     currentQuestionIndex++;
 
     if (currentQuestionIndex < quizData.length) {
@@ -85,23 +189,37 @@ function showResults() {
     quizCard.classList.add("hidden");
     resultsCard.classList.remove("hidden");
 
-    let topFrogtype = "Fire"; 
-    let maxScore = -1;
-
-    for (const frogtype in scoreTracker) {
-        if (scoreTracker[frogtype] > maxScore) {
-            maxScore = scoreTracker[frogtype];
-            topFrogtype = frogtype;
+    const { maxVal, keys } = Object.entries(scoreTracker).reduce(
+      (acc, [key, val]) => {
+        if (val > acc.maxVal) {
+          return { maxVal: val, keys: [key] };
         }
-    }
+        if (val === acc.maxVal) {
+          acc.keys.push(key);
+        }
+        return acc;
+      },
+      { maxVal: -Infinity, keys: [] }
+    );
 
-    personalityTitle.textContent = resultsData[topFrogtype].title;
-    personalityDesc.textContent = resultsData[topFrogtype].desc;
+    let results = [];
+    for (const group of keys) {
+        results.push(resultsData[group].title);
+    }
+    personalityTitle.textContent = results.join(", ");
+    // personalityDesc.textContent = resultsData[topFrogtype].desc;
 }
 
 restartBtn.addEventListener("click", () => {
     currentQuestionIndex = 0;
-    scoreTracker = { Fire: 0, Water: 0, Earth: 0, Air: 0 };
+    scoreTracker = { 
+        Pacman: 0, 
+        Bull: 0, 
+        Flying: 0, 
+        Humming: 0,
+        Burrowing: 0,
+        Dart: 0
+    };
     resultsCard.classList.add("hidden");
     quizCard.classList.remove("hidden");
     loadQuestion();
